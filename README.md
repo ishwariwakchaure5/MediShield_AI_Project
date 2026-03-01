@@ -85,6 +85,90 @@ This layered architecture mirrors real-world AI safety middleware systems.
 
 ---
 
+---
+
+# 🤖 AI Model Used
+
+## Large Language Model (LLM)
+
+MediShield AI uses:
+
+> **OpenAI GPT-4.1-mini**
+
+This model is accessed via the OpenAI API and is responsible for generating healthcare-related responses.
+
+### Model Details
+
+- Model: `gpt-4.1-mini`
+- Type: Transformer-based Large Language Model (LLM)
+- Access Method: OpenAI API
+- Usage: Response generation only
+- Training: Pre-trained model (not trained in this project)
+
+The LLM is constrained using a custom **SYSTEM_PROMPT** to ensure:
+
+- No medical diagnosis
+- No medication dosage instructions
+- Educational explanations only
+- Encouragement of professional consultation
+
+---
+
+# 🛠️ What Was Self-Built
+
+While the language model is pre-trained, the entire **safety architecture** around it was designed and implemented in this project.
+
+### Self-Built Components
+
+- Risk Classification Engine (`risk_classifier.py`)
+- Severity Scoring System (`severity_engine.py`)
+- Action Decision Engine (`action_engine.py`)
+- Offline Evaluation Engine (`offline_action_engine.py`)
+- Dataset Benchmarking Framework
+- Streamlit Guardrail Interface
+- Export & Reporting System
+
+These components use:
+
+- Rule-based keyword matching
+- Deterministic safety logic
+- Severity-based action mediation
+- Structured evaluation metrics
+
+---
+
+# 🧠 System Type
+
+MediShield AI is a:
+
+> Hybrid AI Safety System  
+> (LLM-based response generation + self-built rule-based guardrail middleware)
+
+It is not a custom-trained neural network model.  
+Instead, it demonstrates AI safety engineering by building a structured control layer around a large language model.
+
+---
+
+# 💬 How to Describe This Project (Interview Version)
+
+If asked:
+
+**"What AI did you use?"**
+
+You can answer:
+
+> I used OpenAI’s GPT-4.1-mini large language model for response generation and built a custom rule-based guardrail system around it to enforce healthcare safety constraints.
+
+If asked:
+
+**"Did you train your own AI model?"**
+
+You can answer:
+
+> I did not train a neural network from scratch. Instead, I engineered a safety middleware layer that controls and constrains a pre-trained LLM to ensure responsible healthcare outputs.
+
+---
+
 # 🛡️ Core Modules (Technical Breakdown)
 
 ---
